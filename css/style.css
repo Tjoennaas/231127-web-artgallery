@@ -1,0 +1,329 @@
+
+body{
+	height: 1000px;
+}	
+
+header{
+	font-size: 1.625rem ;
+    width: 100rem;
+	height: 9.75rem;
+	padding-left: 4rem;
+	color:white ;
+	background-color: #000;
+    display: flex;	
+	align-items: center;
+}
+ 
+nav{ 
+     cursor: pointer;
+     font-size: 1.1rem;
+
+     position: absolute;
+     left: 9.5rem;
+     top: 12rem;
+   
+     display: flex;
+     gap: 1rem;
+}
+
+aside{
+	margin-top: 5rem;
+	margin-left: 2rem;
+}
+	
+aside button{
+	  cursor: pointer;
+	  display: flex;
+	  flex-direction: column;	 	
+}
+	
+.filter{
+	 display: flex;
+	 flex-direction: column;
+	 gap: 0.3rem; 
+}
+
+p{
+     padding-top: 0.3rem;
+     font-weight: 900;
+}
+
+
+
+
+
+
+
+.list-items{
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	
+	position: relative;
+	left: 9rem;
+	top: -15rem;  
+ }
+
+.list-item img{
+	cursor: pointer; 
+	width: 50%;
+} 
+
+
+
+
+
+
+.component {
+	display: none;
+	flex-flow: column nowrap;
+
+	position: absolute;
+	top: 10rem;
+	left: 6rem;
+ }
+ 
+.component--visible {
+	  display: flex;
+   }
+
+.component img{ 
+	position: relative;
+	top: 7.8rem;
+	left: -2.2rem;
+	width: 14rem;
+	height:  30rem;
+}
+
+
+
+
+
+
+ #colorbox {
+	border: 1px solid black;
+	background-color: white;
+	height: 4rem;
+	width: 10rem;
+	
+  
+	  position: absolute;
+	  left: 4.8rem;
+	  top: 45rem;
+	   
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  padding: 1rem; 
+	}
+	 
+  #colorbox span {
+	border: 1px solid white;
+	  cursor: pointer;
+	  width: 20rem;
+	  height: 3rem; 
+	}
+
+
+
+
+
+
+    a{
+		position: absolute;
+		top: 1.3rem;
+		left: -5rem;
+		padding-left:0.3rem;
+	}
+
+     .styling{
+		visibility: hidden;
+	 }
+
+
+
+
+
+
+	.tabs {
+		display: flex;
+		position:absolute;
+		left: 6rem;
+		top: 39rem;
+	}
+  
+	.tab {
+	
+		font: hidden;
+		cursor: pointer;
+		padding: 10px;
+		border: 1px solid #ccc;
+		margin-right: 5px;
+	}
+  
+	 
+  
+
+
+
+	  .gallery {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+  
+	  .gallery img {
+		width: 18rem;
+		height: 20rem;
+
+	    position:absolute;
+	    top: 15rem;
+		left: 1.4rem;
+		
+		margin-bottom: 10px;
+		display: none; 
+	  }
+
+
+
+
+	  
+    .component__information-text{
+		position: absolute;
+		left: 15rem;
+		top: 3rem;
+	}
+
+    .component {
+		margin-bottom: 20px;
+	  }
+  
+	.component__item img {
+		max-width: 100%;
+		height: 210px;
+		width: 210px;
+	  }
+
+    
+
+
+
+
+
+  
+
+ @media screen and ( min-width: 705px ){
+
+.list-items{
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	   }
+
+.list-items img{
+		cursor: pointer;
+		width: 90%;
+		height: 90%;
+	  } 
+}
+
+
+ @media screen and ( min-width: 745px ){
+
+.list-items {
+	 width:  80% ;
+		height: 80% ;
+		
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
+       }
+ }
+
+
+
+
+
+	@media screen and ( min-width: 650px ){
+
+		.component img{ 
+	position: relative;
+	left: 5rem;
+	width: 20rem;
+	height:  20rem;
+} 		
+	  
+.component__information-text{
+	position: absolute;
+	left: 29rem;
+	
+}
+
+.gallery img {
+	width: 25rem;
+	height: 27rem;
+
+	position:absolute;
+	top: 15rem;
+	left: 9rem;
+	
+
+  }
+
+.tabs{
+	left: 25rem;
+	top: 47rem;
+}
+
+#colorbox{
+	
+
+	left: 12rem;
+	top: 46.5rem;
+}
+
+}
+
+
+	@media screen and ( min-width: 920px){
+	
+		.component img{ 
+			position: relative;
+			left: 8rem;
+			width: 30rem;
+			height:  35rem;
+		} 	
+			
+			  
+		.component__information-text{
+			position: absolute;
+			left: 45rem;
+			
+		}
+		
+		.gallery img {
+			width: 35rem;
+			height: 42rem;
+		
+			position:absolute;
+			top: 15rem;
+			left: 12rem;
+		
+		  }
+		
+		.tabs{
+			left: 31rem;
+			top: 63rem;
+		}
+		
+		#colorbox{
+			left: 18rem;
+			top: 63rem;
+		
+		}
+		
+	}
+	
+
+
+	

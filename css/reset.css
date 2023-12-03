@@ -1,0 +1,39 @@
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+    
+}
+
+fieldset{
+	border: none;
+}
+
+li{
+	list-style: none;
+}
+
+button {
+	font: inherit;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	touch-action: manipulation;
+}
+
+a{
+text-decoration: none;
+border: 1px solid black;
+width: 6rem;
+border-radius: 0.5rem;
+cursor: pointer;
+}
+
+.button__styling{
+	border: 1px solid black;
+    cursor: pointer;
+	border-radius: 0.5rem;
+
+}
+

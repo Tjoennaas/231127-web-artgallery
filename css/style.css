@@ -48,23 +48,37 @@ p{
      font-weight: 900;
 }
 
+.filter-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	width: 6rem;
+	height: 3rem;
+	border-radius: 5rem;
+    border: 1px solid black;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+
+  .filter-button--active {
+	
+	background-color: palegreen;
+
+  }
 
 
-
-
-
-
-.list-items{
+.image-container{
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
 	
 	position: relative;
-	left: 9rem;
-	top: -15rem;  
- }
+	left: 12rem;
+	top: -28rem;
+}
 
-.list-item img{
+.image-item img{
 	cursor: pointer; 
 	width: 50%;
 } 
@@ -101,15 +115,15 @@ p{
 
 
  #colorbox {
-	border: 1px solid black;
-	background-color: white;
-	height: 4rem;
-	width: 10rem;
+	  border: 1px solid black;
+	  background-color: white;
+	  height: 4rem;
+	  width: 10rem;
 	
   
 	  position: absolute;
 	  left: 4.8rem;
-	  top: 45rem;
+	  top: 43rem;
 	   
 	  display: flex;
 	  align-items: center;
@@ -118,7 +132,7 @@ p{
 	}
 	 
   #colorbox span {
-	border: 1px solid white;
+	  border: 1px solid white;
 	  cursor: pointer;
 	  width: 20rem;
 	  height: 3rem; 
@@ -136,8 +150,15 @@ p{
 		padding-left:0.3rem;
 	}
 
-     .styling{
+.styling{
 		visibility: hidden;
+	 }
+
+ .styling-header{
+        position: absolute;
+		top: 38rem;
+		left: 1rem;
+
 	 }
 
 
@@ -145,34 +166,34 @@ p{
 
 
 
-	.tabs {
+.tabs {
 		display: flex;
 		position:absolute;
-		left: 6rem;
-		top: 39rem;
+		left: 5rem;
+		top: 38rem;
 	}
   
-	.tab {
+.tab {
 	
 		font: hidden;
 		cursor: pointer;
 		padding: 10px;
-		border: 1px solid #ccc;
+		border: 1px solid black;
 		margin-right: 5px;
+		border-radius: 3rem;
+		background-color: greenyellow;
 	}
+
   
-	 
-  
 
-
-
-	  .gallery {
+.gallery {
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: 10px;
 	}
   
-	  .gallery img {
+
+.gallery img {
 		width: 18rem;
 		height: 20rem;
 
@@ -187,18 +208,21 @@ p{
 
 
 
+
+
+
 	  
-    .component__information-text{
+.component__information-text{
 		position: absolute;
 		left: 15rem;
 		top: 3rem;
 	}
 
-    .component {
+.component {
 		margin-bottom: 20px;
 	  }
   
-	.component__item img {
+.component__item img {
 		max-width: 100%;
 		height: 210px;
 		width: 210px;
@@ -209,121 +233,131 @@ p{
 
 
 
+ @media screen and ( min-width: 650px ){
+
+.component img{ 
+		position: relative;
+		left: 5rem;
+		width: 20rem;
+		height:  20rem;
+} 		
+		
+.component__information-text{
+		position: absolute;
+		left: 29rem;
+	
+}
+
+.gallery img {
+		width: 25rem;
+		height: 27rem;
+
+		position:absolute;
+		top: 15rem;
+		left: 9rem;
+	}
+
+.tabs{
+	   left: 23rem;
+	   top: 47rem;
+}
+
+
+#colorbox{
+		position: absolute;
+		left: 11rem;
+		top: 46.5rem;
+}
+
+.styling-header{
+		position: absolute;
+		top: 43rem;
+		left:11rem;
+  }
+		
+}
+		
 
   
 
  @media screen and ( min-width: 705px ){
 
-.list-items{
-        display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-	   }
+.image-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	}
 
-.list-items img{
-		cursor: pointer;
-		width: 90%;
-		height: 90%;
-	  } 
+.image-container img{
+	cursor: pointer;
+	width: 90%;
+	height: 90%;
+   } 
 }
+
+
+
 
 
  @media screen and ( min-width: 745px ){
 
-.list-items {
-	 width:  80% ;
-		height: 80% ;
-		
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 1rem;
-       }
- }
-
-
-
-
-
-	@media screen and ( min-width: 650px ){
-
-		.component img{ 
-	position: relative;
-	left: 5rem;
-	width: 20rem;
-	height:  20rem;
-} 		
-	  
-.component__information-text{
-	position: absolute;
-	left: 29rem;
+.image-container {
+	width:  80% ;
+	height: 80% ;
 	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+   }
 }
 
+
+
+
+
+@media screen and ( min-width: 920px){
+	
+.component img{ 
+	position: relative;
+	left: 8rem;
+	width: 30rem;
+	height:  35rem;
+ } 	
+	
+			
+.component__information-text{
+	position: absolute;
+	left: 45rem;
+   }
+	
 .gallery img {
-	width: 25rem;
-	height: 27rem;
+	width: 35rem;
+	height: 42rem;
 
 	position:absolute;
 	top: 15rem;
-	left: 9rem;
-	
-
-  }
-
-.tabs{
-	left: 25rem;
-	top: 47rem;
-}
-
-#colorbox{
-	
-
 	left: 12rem;
-	top: 46.5rem;
-}
-
-}
-
-
-	@media screen and ( min-width: 920px){
+   }
 	
-		.component img{ 
-			position: relative;
-			left: 8rem;
-			width: 30rem;
-			height:  35rem;
-		} 	
-			
-			  
-		.component__information-text{
-			position: absolute;
-			left: 45rem;
-			
-		}
-		
-		.gallery img {
-			width: 35rem;
-			height: 42rem;
-		
-			position:absolute;
-			top: 15rem;
-			left: 12rem;
-		
-		  }
-		
-		.tabs{
-			left: 31rem;
-			top: 63rem;
-		}
-		
-		#colorbox{
-			left: 18rem;
-			top: 63rem;
-		
-		}
-		
+.tabs{
+	left: 54rem;
+	top: 40rem;
+	width: 11rem;
+   }
+	
+#colorbox{
+	left: 54rem;
+	top: 44rem;
+	}
+	
+.styling-header{
+	position: absolute;
+	top: 36rem;
+	left:54rem;
 	}
 	
 
+}
 
-	
+
+

@@ -23,17 +23,16 @@ button {
 }
 
 a{
-text-decoration: none;
-border: 1px solid black;
-width: 6rem;
-border-radius: 0.5rem;
-cursor: pointer;
-}
+	text-decoration: none;
+	border: 1px solid black;
+	width: 6rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+ }
 
 .button__styling{
 	border: 1px solid black;
     cursor: pointer;
 	border-radius: 0.5rem;
-
-}
+ }
 

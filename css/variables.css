@@ -1,4 +1,42 @@
+
+
+
+
 :root {
-	--background: #fff;
-	--foreground: #000;
-}
+
+	--color-primary: black;
+	--color-secondary: #c1c5c9;
+	--color-tertiary:  greenyellow;
+
+	--spacing-xsmall: 0.5rem;
+	--spacing-small: 1rem;
+	--spacing-large: 2rem;
+	--spacing-xlarge: 4rem;
+	--spacing-xxlarge: 6rem;
+
+
+	--font-size-xsmall: 0.5rem;
+	--font-size-small: 1rem;
+	--font-size-medium: 1.5rem;
+
+
+  
+
+	
+
+
+	
+	
+
+	
+
+
+
+
+
+} 
+
+
+
+
+

@@ -1,37 +1,98 @@
+*{
 
+
+}
 body{
-	height: 1000px;
-}	
+	font-family: 'Hedvig Letters Serif', serif;
+}
+
 
 header{
-	font-size: 1.625rem ;
+	font-size: var(--font-size-small);
     width: 100rem;
-	height: 9.75rem;
-	padding-left: 4rem;
-	color:white ;
-	background-color: #000;
+	height: 9.5rem;
+	padding-left: var(--spacing-xlarge);
+	color:var(--color-secondary);
+
+	background-color:var(--color-primary);
     display: flex;	
-	align-items: center;
+	align-items: start;
+}
+
+
+
+.accordion {
+	
+	width: 10rem;
+	border-radius: 5px;
+    margin-left: -12rem;
+	overflow: hidden;
+	margin-top: var(--spacing-xlarge);
+}
+
+.accordion__toggle {
+
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+	background:var(--color-primary);
+	color: var(--color-secondary);
+  
+   border: 1px solid var(--color-secondary);
+}
+
+
+.accordion__content {
+	display: none;
+	padding: 20px;
+	
+}
+
+.accordion__content--visible {
+	font-family:sans-serif;
+	font-size: 0.9rem;
+	position: absolute;
+	left: 15rem;
+	top: 1rem;
+	background-color:black;
+	border: 1px solid var(--color-secondary);
+	width: 25rem;
+	display: block;
+	
 }
  
+.collapse {
+	cursor: pointer;
+	position: absolute;
+	text-align: center;
+	width: 2rem;
+	border: 1px solid var(--color-secondary);
+	left: 23rem;
+	top: -0.1rem;
+	
+}
+ 
+
+
 nav{ 
      cursor: pointer;
-     font-size: 1.1rem;
+     font-size: var(--font-size-small);
 
      position: absolute;
      left: 9.5rem;
      top: 12rem;
    
      display: flex;
-     gap: 1rem;
+     gap:var(--spacing-small);
 }
 
 aside{
-	margin-top: 5rem;
-	margin-left: 2rem;
+	margin-top: var(--spacing-xxlarge);
+	margin-left:var(--spacing-large);
 }
 	
 aside button{
+	
 	  cursor: pointer;
 	  display: flex;
 	  flex-direction: column;	 	
@@ -40,12 +101,15 @@ aside button{
 .filter{
 	 display: flex;
 	 flex-direction: column;
-	 gap: 0.3rem; 
+	 gap: var(--spacing-xsmall);
 }
 
-p{
-     padding-top: 0.3rem;
-     font-weight: 900;
+
+
+p, li{
+	padding-top:var(--spacing-xsmall);
+	font-family: sans-serif;
+	font-weight: 900;
 }
 
 .filter-button {
@@ -53,17 +117,17 @@ p{
 	align-items: center;
 	justify-content: center;
 	margin-right: 10px;
-	width: 6rem;
-	height: 3rem;
-	border-radius: 5rem;
-    border: 1px solid black;
+	width: var(--spacing-xxlarge);
+	height: var(--spacing-large);
+	border-radius:var(--spacing-xxlarge);
+    border: 1px solid var(--color-primary);    
 	cursor: pointer;
 	transition: background-color 0.3s;
   }
 
   .filter-button--active {
 	
-	background-color: palegreen;
+	background-color:var(--color-tertiary);
 
   }
 
@@ -75,26 +139,27 @@ p{
 	
 	position: relative;
 	left: 12rem;
-	top: -28rem;
+	top: -22rem;
 }
 
 .image-item img{
 	cursor: pointer; 
 	width: 50%;
+	object-fit:contain; 
 } 
 
 
 
 
 
-
 .component {
+	height: 80rem;
 	display: none;
 	flex-flow: column nowrap;
 
 	position: absolute;
 	top: 10rem;
-	left: 6rem;
+	left: var(--spacing-xxlarge);
  }
  
 .component--visible {
@@ -111,126 +176,125 @@ p{
 
 
 
+.component__item img {
+	max-width: 100%;
+	height: 13.125rem;
+	width: 13.125rem;
+  }
+	  
+.component__information-text{
+	position: absolute;
+	left: 15rem;
+	top: 3rem;
+}
 
 
 
- #colorbox {
-	  border: 1px solid black;
-	  background-color: white;
-	  height: 4rem;
-	  width: 10rem;
-	
+
+
+.colorbox {
+	border: 1px solid black;
+	background-color: white;
+	height: var(--spacing-xlarge);
+	width: 10rem;
   
-	  position: absolute;
-	  left: 4.8rem;
-	  top: 43rem;
-	   
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  padding: 1rem; 
-	}
+
+	position: absolute;
+	left: 4.2rem;
+	top: 46rem;
 	 
-  #colorbox span {
-	  border: 1px solid white;
-	  cursor: pointer;
-	  width: 20rem;
-	  height: 3rem; 
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacing-small)
+  }
+   
+.colorbox span {
+	border: 1px solid white;
+	cursor: pointer;
+	width: 20rem;
+	height:3rem;
+  }
+ 
 
-
-
-
-
-
-    a{
-		position: absolute;
-		top: 1.3rem;
-		left: -5rem;
-		padding-left:0.3rem;
+a{
+	position: absolute;
+	top: 1.3rem;
+	left: -4rem;
+	padding-left:var(--spacing-xsmall);
+	width: 8rem;
 	}
 
 .styling{
 		visibility: hidden;
 	 }
 
- .styling-header{
-        position: absolute;
-		top: 38rem;
-		left: 1rem;
+	 .title-frame{
+		position: relative;
+		top: 27rem;
+		left: 4rem;
+	 }
+
+	 .title-wallcolor{
+		position:relative ;
+		top: 35rem;
+		left: 4rem;
 
 	 }
 
 
 
 
-
-
-.tabs {
-		display: flex;
-		position:absolute;
-		left: 5rem;
-		top: 38rem;
-	}
-  
-.tab {
+.frame-button-container {
+	display: flex;
+	gap:var(--spacing-small);
+	position:absolute;
+	left: 4rem;
+	top: 40rem;
+ }
 	
-		font: hidden;
-		cursor: pointer;
-		padding: 10px;
-		border: 1px solid black;
-		margin-right: 5px;
-		border-radius: 3rem;
-		background-color: greenyellow;
+.frame-button {
+	cursor: pointer;
+	padding: 0.625rem;
+	border: 1px solid #444;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+ }
+	
+
+.frame-button.active {
+	background-color:var(--color-tertiary);
+	color: var(--color-secondary);
 	}
-
-  
-
-.gallery {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 10px;
+	
+.frame-image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top:1.25rem;
 	}
-  
-
-.gallery img {
-		width: 18rem;
-		height: 20rem;
-
-	    position:absolute;
-	    top: 15rem;
-		left: 1.4rem;
+	
+.frame-image {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0.625rem;
 		
-		margin-bottom: 10px;
-		display: none; 
-	  }
+	}
+	
+.frame-image img {
+	max-width: 100%;
+	max-height: 100%;
+	
+	width: 18rem;
+	height: 20rem;
 
-
-
-
-
-
-
-	  
-.component__information-text{
-		position: absolute;
-		left: 15rem;
-		top: 3rem;
+	position:absolute;
+	top: 15rem;
+	left: 1.4rem;	
+	   
 	}
 
-.component {
-		margin-bottom: 20px;
-	  }
-  
-.component__item img {
-		max-width: 100%;
-		height: 210px;
-		width: 210px;
-	  }
-
-    
-
-
+	
 
 
  @media screen and ( min-width: 650px ){
@@ -241,14 +305,16 @@ p{
 		width: 20rem;
 		height:  20rem;
 } 		
-		
+	
+
 .component__information-text{
 		position: absolute;
-		left: 29rem;
+		left: 30rem;
 	
 }
 
-.gallery img {
+	
+.frame-image img {
 		width: 25rem;
 		height: 27rem;
 
@@ -257,107 +323,146 @@ p{
 		left: 9rem;
 	}
 
-.tabs{
+	.frame-button-container{
 	   left: 23rem;
 	   top: 47rem;
 }
 
 
-#colorbox{
+.colorbox{
 		position: absolute;
 		left: 11rem;
-		top: 46.5rem;
-}
-
-.styling-header{
-		position: absolute;
-		top: 43rem;
-		left:11rem;
-  }
-		
-}
-		
-
-  
-
- @media screen and ( min-width: 705px ){
-
-.image-container{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
-	}
-
-.image-container img{
-	cursor: pointer;
-	width: 90%;
-	height: 90%;
-   } 
-}
+		top: 47rem;
+    }
 
 
+	.title-wallcolor{
+		position: relative;
+		top: 35rem;
+		left: 10rem;
+	 }
 
+	 .title-frame{
+		position:relative ;
+		top: 33.5rem;
+		left: 25rem;
+
+	 }	
+ }
 
 
  @media screen and ( min-width: 745px ){
 
-.image-container {
-	width:  80% ;
-	height: 80% ;
+
+	.image-container {
+		width:  90% ;
+		height: 90% ;
+		
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap:  var(--spacing-small);
+	  }
+
+
+	  .image-container img{
+		width:  90% ;
+		height: 90% ;
+		
+		
+	  }
+
+	  header{
+		font-size: var(--font-size-xlarge);
+		width: 100rem;
+		display: flex;	
+		align-items: center;
+	}
+
+	.accordion {
 	
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1rem;
-   }
+		width: 10rem;
+		border-radius: 5px;
+		margin-left: 25rem;
+		margin-top: 1rem;
+	}
+		
 }
-
-
 
 
 
 @media screen and ( min-width: 920px){
+
+
+.accordion {
+	
+		width: 10rem;
+		border-radius: 5px;
+		margin-left: 35rem;
+		margin-top: 1rem;
+	
+	}
+
+.accordion__content--visible {
+		position: absolute;
+		left: 24rem;
+		
+		background-color:black;
+		border: 1px solid var(--color-secondary);
+		width: 26.5rem;
+		display: block;
+	}
+
+.collapse {
+	 left: 24.5rem;
+		
+	}
+	 
 	
 .component img{ 
-	position: relative;
 	left: 8rem;
 	width: 30rem;
-	height:  35rem;
+	height: 35rem;
  } 	
-	
-			
+				
 .component__information-text{
-	position: absolute;
 	left: 45rem;
    }
 	
-.gallery img {
+.frame-image img {
 	width: 35rem;
 	height: 42rem;
-
-	position:absolute;
 	top: 15rem;
 	left: 12rem;
    }
+
 	
-.tabs{
-	left: 54rem;
-	top: 40rem;
+.frame-button-container{
+	font-size: 0.7rem;
+	left: 50rem;
+	top: 45rem;
 	width: 11rem;
    }
 	
-#colorbox{
-	left: 54rem;
-	top: 44rem;
-	}
-	
-.styling-header{
-	position: absolute;
-	top: 36rem;
-	left:54rem;
-	}
-	
+.colorbox{
+	left: 50rem;
+	top: 52rem;
 
 }
 
 
+.title-wallcolor{
+	position: relative;
+	top: 40rem;
+	left: 50rem;
+	
+}
+
+ .title-frame{
+	position:relative ;
+	top: 32rem;
+	left: 50rem;
+
+	 }
+
+}
 
